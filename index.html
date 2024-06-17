@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dordle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <div id="score-and-info">
+            <div id="score">Score: 0</div>
+            <button id="info-button">i</button>
+        </div>
+        <div id="grids">
+            <div id="grid1" class="grid"></div>
+            <div id="grid2" class="grid"></div>
+        </div>
+        <div id="keyboard"></div>
+        <div id="completion-message"></div>
+    </div>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>How to play</h2>
+            <p>You have to guess 2 hidden words in seven tries and the color of the letters changes to show how close you are.</p>
+            <p>To start the game, just enter any word, for example:</p>
+            <div class="example">
+                <div class="cell absent">T</div>
+                <div class="cell present">A</div>
+                <div class="cell absent">B</div>
+                <div class="cell present">L</div>
+                <div class="cell correct">E</div>
+            </div>
+            <p>T, B aren't in the target word at all.</p>
+            <p>A, L is in the word but in the wrong spot.</p>
+            <p>E is in the word and in the correct spot.</p>
+            <p>Another try to find matching letters in the target word.</p>
+            <div class="example">
+                <div class="cell correct">F</div>
+                <div class="cell correct">L</div>
+                <div class="cell correct">A</div>
+                <div class="cell absent">S</div>
+                <div class="cell absent">H</div>
+            </div>
+            <p>So close!</p>
+            <div class="example">
+                <div class="cell correct">F</div>
+                <div class="cell correct">L</div>
+                <div class="cell correct">A</div>
+                <div class="cell correct">M</div>
+                <div class="cell correct">E</div>
+            </div>
+            <p>Got it! 🏆</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
